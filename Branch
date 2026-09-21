@@ -1,0 +1,28 @@
+public class Branch implements IAppraisable {
+    private String branchName;
+    private double revenueBillion;
+    public Branch(String branchName, double revenueBillion) {
+        this.branchName = branchName;
+        this.revenueBillion = revenueBillion;
+    }
+    public String getBranchName() {
+        return branchName;
+    }
+    public void setBranchName(String branchName) {
+        this.branchName = branchName;
+    }
+    public double getRevenueBillion() {
+        return revenueBillion;
+    }
+    public void setRevenueBillion(double revenueBillion) {
+        this.revenueBillion = revenueBillion;
+    }
+    @Override
+    public String getRating() {
+        if (revenueBillion >= 10) {
+            return "Hang A";
+        } else {
+            return "Hang B";
+        }
+    }
+}
